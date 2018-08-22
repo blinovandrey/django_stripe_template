@@ -50,7 +50,7 @@ class StripeService:
         return stripe.Charge.retrieve(charge_id).capture()
 
     @handling_exceptions
-    def create_cutomer(self, **params):
+    def create_customer(self, **params):
         return stripe.Customer.create(**params)
 
     @handling_exceptions

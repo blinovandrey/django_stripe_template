@@ -32,7 +32,7 @@ class CustomerView(APIView):
 
     # create customer
     def post(self, request):
-        customer = StripeService().create_cutomer(**request.data)
+        customer = StripeService().create_customer(**request.data)
         return Response(customer.data, status=customer.status)
 
 
